@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Mail, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import MobileMenu from "./MobileMenu";
+import logoImage from "@/assets/logo.jpg";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -50,7 +51,7 @@ const Navbar = () => {
             <motion.div
               className="absolute inset-0 rounded-full opacity-0 pointer-events-none"
               style={{
-                background: "linear-gradient(135deg, hsl(195 100% 50% / 0.2), hsl(270 100% 60% / 0.1))",
+                background: "linear-gradient(135deg, hsl(4 75% 62% / 0.2), hsl(15 80% 55% / 0.1))",
                 filter: "blur(20px)",
               }}
               animate={{
@@ -67,24 +68,30 @@ const Navbar = () => {
               {/* Logo */}
               <motion.a
                 href="#home"
-                className="flex items-center gap-2 group"
+                className="flex items-center gap-3 group"
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="relative">
-                  <Zap className="w-8 h-8 text-primary" />
+                  <img 
+                    src={logoImage} 
+                    alt="IEGS Logo" 
+                    className="w-10 h-10 rounded-full object-cover"
+                  />
                   <motion.div
-                    className="absolute inset-0"
+                    className="absolute inset-0 rounded-full"
                     animate={{
-                      opacity: [0.5, 1, 0.5],
+                      boxShadow: [
+                        "0 0 10px hsl(4 75% 62% / 0.3)",
+                        "0 0 20px hsl(4 75% 62% / 0.5)",
+                        "0 0 10px hsl(4 75% 62% / 0.3)",
+                      ],
                     }}
                     transition={{
                       duration: 2,
                       repeat: Infinity,
                       ease: "easeInOut",
                     }}
-                  >
-                    <Zap className="w-8 h-8 text-primary blur-sm" />
-                  </motion.div>
+                  />
                 </div>
                 <span className="font-display font-bold text-xl text-foreground">
                   IEGS
