@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, MessageCircle, ArrowRight } from "lucide-react";
+import { Phone, MapPin, MessageCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "./AnimatedSection";
 
@@ -12,18 +12,18 @@ const contactMethods = [
     description: "Speak directly to Armandt",
   },
   {
-    icon: MessageCircle,
-    title: "WhatsApp",
-    value: "+27 78 479 5589",
-    href: "https://wa.me/27784795589",
-    description: "Quick responses on WhatsApp",
+    icon: Phone,
+    title: "Alternative Line",
+    value: "071 828 3250",
+    href: "tel:0718283250",
+    description: "Secondary contact number",
   },
   {
-    icon: Mail,
-    title: "Email",
-    value: "info@strategik.co.za",
-    href: "mailto:info@strategik.co.za",
-    description: "For quotes and inquiries",
+    icon: MessageCircle,
+    title: "WhatsApp",
+    value: "+27 71 019 7858",
+    href: "https://wa.me/27710197858",
+    description: "Quick responses on WhatsApp",
   },
   {
     icon: MapPin,

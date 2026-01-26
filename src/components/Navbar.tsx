@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, Mail, Zap } from "lucide-react";
+import { Menu, Phone, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import MobileMenu from "./MobileMenu";
-import logoImage from "@/assets/logo.jpg";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -72,18 +71,16 @@ const Navbar = () => {
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="relative">
-                  <img 
-                    src={logoImage} 
-                    alt="IEGS Logo" 
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center">
+                    <Zap className="w-6 h-6 text-white" />
+                  </div>
                   <motion.div
                     className="absolute inset-0 rounded-full"
                     animate={{
                       boxShadow: [
-                        "0 0 10px hsl(4 75% 62% / 0.3)",
-                        "0 0 20px hsl(4 75% 62% / 0.5)",
-                        "0 0 10px hsl(4 75% 62% / 0.3)",
+                        "0 0 10px hsl(30 100% 50% / 0.3)",
+                        "0 0 20px hsl(30 100% 50% / 0.5)",
+                        "0 0 10px hsl(30 100% 50% / 0.3)",
                       ],
                     }}
                     transition={{

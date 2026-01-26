@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Phone, Mail, Zap, ChevronRight } from "lucide-react";
+import { X, Phone, Zap, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface MobileMenuProps {
@@ -144,7 +144,7 @@ const MobileMenu = ({ isOpen, onClose, navLinks }: MobileMenuProps) => {
                 variants={itemVariants}
                 custom={navLinks.length + 2}
               >
-                <a
+              <a
                   href="tel:0710197858"
                   className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
                 >
@@ -154,13 +154,13 @@ const MobileMenu = ({ isOpen, onClose, navLinks }: MobileMenuProps) => {
                   <span>071 019 7858</span>
                 </a>
                 <a
-                  href="mailto:info@strategik.co.za"
+                  href="tel:0718283250"
                   className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Mail className="w-4 h-4 text-primary" />
+                    <Phone className="w-4 h-4 text-primary" />
                   </div>
-                  <span>info@strategik.co.za</span>
+                  <span>071 828 3250</span>
                 </a>
 
                 <Button variant="glow" className="w-full mt-4" size="lg">
