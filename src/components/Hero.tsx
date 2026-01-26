@@ -1,9 +1,17 @@
-import { motion } from "framer-motion";
-import { ArrowRight, Zap, Shield, Sun, Phone } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Zap, Shield, Sun, Phone, MessageCircle, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
+const whatsappNumbers = [
+  { number: "27710197858", display: "071 019 7858", name: "Armandt" },
+  { number: "27718283250", display: "071 828 3250", name: "Alternative" },
+];
+
 const Hero = () => {
+  const [showWhatsApp, setShowWhatsApp] = useState(false);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
@@ -76,10 +84,77 @@ const Hero = () => {
               Request a Quote
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="xl" className="group">
-              <Phone className="mr-2 w-5 h-5" />
-              Call Armandt
+            <Button variant="outline" size="xl" asChild>
+              <a href="tel:0710197858">
+                <Phone className="mr-2 w-5 h-5" />
+                Call Armandt
+              </a>
             </Button>
+            
+            {/* WhatsApp Button with Dropdown */}
+            <div className="relative">
+              <motion.div
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button
+                  variant="outline"
+                  size="xl"
+                  className="bg-green-600/20 border-green-500/50 hover:bg-green-600/30 hover:border-green-400"
+                  onClick={() => setShowWhatsApp(!showWhatsApp)}
+                >
+                  <MessageCircle className="mr-2 w-5 h-5 text-green-400" />
+                  <span className="text-green-400">WhatsApp</span>
+                  <motion.div
+                    animate={{ rotate: showWhatsApp ? 45 : 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="ml-2"
+                  >
+                    {showWhatsApp ? (
+                      <X className="w-4 h-4 text-green-400" />
+                    ) : null}
+                  </motion.div>
+                </Button>
+              </motion.div>
+
+              {/* WhatsApp Numbers Dropdown */}
+              <AnimatePresence>
+                {showWhatsApp && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 z-50"
+                  >
+                    <div className="bg-card/95 backdrop-blur-xl border border-green-500/30 rounded-2xl p-2 shadow-2xl">
+                      <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-card/95 border-l border-t border-green-500/30 rotate-45" />
+                      
+                      {whatsappNumbers.map((item, index) => (
+                        <motion.a
+                          key={item.number}
+                          href={`https://wa.me/${item.number}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-3 p-3 rounded-xl hover:bg-green-500/10 transition-colors group"
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: index * 0.1 }}
+                          whileHover={{ x: 5 }}
+                        >
+                          <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center group-hover:bg-green-500/30 transition-colors">
+                            <MessageCircle className="w-5 h-5 text-green-400" />
+                          </div>
+                          <div className="text-left">
+                            <p className="font-medium text-foreground">{item.name}</p>
+                            <p className="text-sm text-green-400">{item.display}</p>
+                          </div>
+                        </motion.a>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
           </motion.div>
 
           {/* Feature Pills */}
