@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Zap, Phone, Mail, MapPin } from "lucide-react";
+import { Zap, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -20,13 +20,9 @@ const Footer = () => {
               </div>
               <span className="font-display font-bold text-xl">IEGS</span>
             </motion.a>
-            <p className="text-muted-foreground text-sm mb-4">
+            <p className="text-muted-foreground text-sm">
               Your Partner in Power, Safety and Reliability. Professional electrical 
               and security solutions for Gauteng.
-            </p>
-            <p className="text-muted-foreground text-xs">
-              Strategic Consultancy T/A Strategik<br />
-              2023/546531/07
             </p>
           </div>
 
@@ -68,11 +64,11 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="mailto:info@strategik.co.za" 
+                  href="tel:0718283250" 
                   className="flex items-center gap-2 text-muted-foreground text-sm hover:text-primary transition-colors"
                 >
-                  <Mail className="w-4 h-4" />
-                  info@strategik.co.za
+                  <Phone className="w-4 h-4" />
+                  071 828 3250
                 </a>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground text-sm">
@@ -89,7 +85,7 @@ const Footer = () => {
             © {currentYear} IEGS. All rights reserved.
           </p>
           <p className="text-muted-foreground text-xs">
-            Contact Person: Armandt | Cell: 071 019 7858
+            Contact: 071 019 7858 | 071 828 3250
           </p>
         </div>
       </div>
