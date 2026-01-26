@@ -84,13 +84,8 @@ const Hero = () => {
               Request a Quote
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="xl" asChild>
-              <a href="tel:0710197858">
-                <Phone className="mr-2 w-5 h-5" />
-                Call Armandt
-              </a>
-            </Button>
             
+
             {/* WhatsApp Button with Dropdown */}
             <div className="relative">
               <motion.div
