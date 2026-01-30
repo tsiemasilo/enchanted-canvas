@@ -5,25 +5,18 @@ import AnimatedSection from "./AnimatedSection";
 
 const contactMethods = [
   {
-    icon: Phone,
+    icon: MessageCircle,
     title: "Call Now",
     value: "071 019 7858",
-    href: "tel:0710197858",
+    href: "https://wa.me/27710197858",
     description: "Speak directly to Armandt",
   },
   {
-    icon: Phone,
+    icon: MessageCircle,
     title: "Alternative Line",
     value: "071 828 3250",
-    href: "tel:0718283250",
+    href: "https://wa.me/27718283250",
     description: "Secondary contact number",
-  },
-  {
-    icon: MessageCircle,
-    title: "WhatsApp",
-    value: "+27 71 019 7858",
-    href: "https://wa.me/27710197858",
-    description: "Quick responses on WhatsApp",
   },
   {
     icon: MapPin,
@@ -66,7 +59,7 @@ const Contact = () => {
         </AnimatedSection>
 
         {/* Contact Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {contactMethods.map((method, index) => (
             <AnimatedSection
               key={method.title}
