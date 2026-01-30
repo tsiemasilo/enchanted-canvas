@@ -26,7 +26,15 @@ src/
 - Run `npm run dev` to start the development server on port 5000
 - The app uses Vite's HMR for fast refresh
 
+## Netlify Deployment
+The app is configured for Netlify hosting:
+- `netlify.toml` - Build settings and SPA redirects
+- `public/_redirects` - Fallback redirect file for client-side routing
+- Build command: `npm run build`
+- Publish directory: `dist`
+
 ## Recent Changes
+- January 30, 2026: Added Netlify deployment configuration
 - January 30, 2026: Migrated from Lovable to Replit environment
   - Updated vite.config.ts to use port 5000 and allow all hosts
   - Removed lovable-tagger dependency from build
