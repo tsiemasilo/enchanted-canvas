@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, Phone, Zap } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import MobileMenu from "./MobileMenu";
+import WhatsAppPopup from "./WhatsAppPopup";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -126,11 +126,9 @@ const Navbar = () => {
                   whileHover={{ scale: 1.05 }}
                 >
                   <Phone className="w-4 h-4" />
-                  <span className={isScrolled ? "hidden xl:inline" : ""}>071 019 7858</span>
+                  <span className={isScrolled ? "hidden xl:inline" : ""}>Call Armandt</span>
                 </motion.a>
-                <Button variant="glow" size="sm">
-                  Get Quote
-                </Button>
+                <WhatsAppPopup variant="glow" size="sm" />
               </div>
 
               {/* Mobile Menu Button */}

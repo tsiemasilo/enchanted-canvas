@@ -1,13 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Zap, Shield, Sun, Phone, MessageCircle, X } from "lucide-react";
+import { ArrowRight, Zap, Shield, Sun, MessageCircle, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
-
-const whatsappNumbers = [
-  { number: "27710197858", display: "071 019 7858", name: "Armandt" },
-  { number: "27718283250", display: "071 828 3250", name: "Alternative" },
-];
+import WhatsAppPopup, { whatsappNumbers } from "./WhatsAppPopup";
 
 const Hero = () => {
   const [showWhatsApp, setShowWhatsApp] = useState(false);
@@ -80,10 +76,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <Button variant="glow" size="xl" className="group">
-              Request a Quote
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <WhatsAppPopup variant="glow" size="xl" />
             
 
             {/* WhatsApp Button with Dropdown */}

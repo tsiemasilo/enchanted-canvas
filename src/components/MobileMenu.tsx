@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Phone, Zap, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import WhatsAppPopup from "./WhatsAppPopup";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -154,18 +154,16 @@ const MobileMenu = ({ isOpen, onClose, navLinks }: MobileMenuProps) => {
                   <span>071 019 7858</span>
                 </a>
                 <a
-                  href="tel:0718283250"
+                  href="tel:0749054335"
                   className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                     <Phone className="w-4 h-4 text-primary" />
                   </div>
-                  <span>071 828 3250</span>
+                  <span>074 905 4335</span>
                 </a>
 
-                <Button variant="glow" className="w-full mt-4" size="lg">
-                  Request a Quote
-                </Button>
+                <WhatsAppPopup variant="glow" size="lg" className="w-full mt-4" />
               </motion.div>
             </div>
           </motion.div>

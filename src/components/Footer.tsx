@@ -64,11 +64,11 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="tel:0718283250" 
+                  href="tel:0749054335" 
                   className="flex items-center gap-2 text-muted-foreground text-sm hover:text-primary transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  071 828 3250
+                  074 905 4335
                 </a>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground text-sm">
@@ -85,7 +85,7 @@ const Footer = () => {
             © {currentYear} IEGS. All rights reserved.
           </p>
           <p className="text-muted-foreground text-xs">
-            Contact: 071 019 7858 | 071 828 3250
+            Contact: 071 019 7858 | 074 905 4335
           </p>
         </div>
       </div>
