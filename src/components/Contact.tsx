@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { Phone, MapPin, MessageCircle, ArrowRight } from "lucide-react";
+import { Phone, MapPin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "./AnimatedSection";
+import WhatsAppPopup from "./WhatsAppPopup";
 
 const contactMethods = [
   {
@@ -14,8 +15,8 @@ const contactMethods = [
   {
     icon: MessageCircle,
     title: "Alternative Line",
-    value: "071 828 3250",
-    href: "https://wa.me/27718283250",
+    value: "074 905 4335",
+    href: "https://wa.me/27749054335",
     description: "Secondary contact number",
   },
   {
@@ -128,13 +129,12 @@ const Contact = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button variant="glow" size="lg" className="group">
-                  Request a Quote
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button variant="outline" size="lg">
-                  <Phone className="mr-2 w-4 h-4" />
-                  Call 071 019 7858
+                <WhatsAppPopup variant="glow" size="lg" />
+                <Button variant="outline" size="lg" asChild>
+                  <a href="tel:0710197858">
+                    <Phone className="mr-2 w-4 h-4" />
+                    Call 071 019 7858
+                  </a>
                 </Button>
               </div>
             </div>
