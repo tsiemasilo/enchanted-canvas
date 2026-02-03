@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export const whatsappNumbers = [
   { number: "27710197858", display: "071 019 7858", name: "Armandt" },
-  { number: "27749054335", display: "074 905 4335", name: "Alternative" },
+  { number: "27749054335", display: "074 905 4335", name: "Nelson" },
 ];
 
 interface WhatsAppPopupProps {
@@ -27,21 +27,19 @@ const WhatsAppPopup = ({
 
   return (
     <div className="relative">
-      <motion.div whileTap={{ scale: 0.95 }}>
-        <Button
-          variant={variant}
-          size={size}
-          className={`group ${className}`}
-          onClick={() => setShowWhatsApp(!showWhatsApp)}
-        >
-          {children || (
-            <>
-              Request a Quote
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </>
-          )}
-        </Button>
-      </motion.div>
+      <Button
+        variant={variant}
+        size={size}
+        className={`group ${className} cursor-default opacity-70`}
+        disabled
+      >
+        {children || (
+          <>
+            Request a Quote
+            <ArrowRight className="ml-2 w-4 h-4" />
+          </>
+        )}
+      </Button>
 
       {/* WhatsApp Numbers Dropdown */}
       <AnimatePresence>
