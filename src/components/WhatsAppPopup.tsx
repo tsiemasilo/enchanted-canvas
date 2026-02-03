@@ -27,21 +27,28 @@ const WhatsAppPopup = ({
 
   return (
     <div className="relative">
-      <Button
-        variant={variant}
-        size={size}
-        className={`group ${className} cursor-default opacity-70`}
-        disabled
+      <motion.a
+        href="mailto:siphesihle74450@gmail.com?subject=Quote Request"
+        whileTap={{ scale: 0.95 }}
       >
-        {children || (
-          <>
-            Request a Quote
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </>
-        )}
-      </Button>
+        <Button
+          variant={variant}
+          size={size}
+          className={`group ${className}`}
+          asChild
+        >
+          <span>
+            {children || (
+              <>
+                Request a Quote
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </>
+            )}
+          </span>
+        </Button>
+      </motion.a>
 
-      {/* WhatsApp Numbers Dropdown */}
+      {/* WhatsApp Numbers Dropdown - kept for potential future use */}
       <AnimatePresence>
         {showWhatsApp && (
           <>
