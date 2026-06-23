@@ -18,7 +18,6 @@ const Footer = () => {
               <div className="relative">
                 <Zap className="w-8 h-8 text-primary" />
               </div>
-              <span className="font-display font-bold text-xl">IEGS</span>
             </motion.a>
             <p className="text-muted-foreground text-sm">
               Your Partner in Power, Safety and Reliability. Professional electrical 
@@ -55,15 +54,6 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="tel:0710197858" 
-                  className="flex items-center gap-2 text-muted-foreground text-sm hover:text-primary transition-colors"
-                >
-                  <Phone className="w-4 h-4" />
-                  071 019 7858
-                </a>
-              </li>
-              <li>
-                <a 
                   href="tel:0749054335" 
                   className="flex items-center gap-2 text-muted-foreground text-sm hover:text-primary transition-colors"
                 >
@@ -82,10 +72,10 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-sm text-center md:text-left">
-            © {currentYear} IEGS. All rights reserved.
+            © {currentYear} All rights reserved.
           </p>
           <p className="text-muted-foreground text-xs">
-            Contact: 071 019 7858 | 074 905 4335
+            Contact: 074 905 4335
           </p>
         </div>
       </div>

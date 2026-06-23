@@ -90,9 +90,6 @@ const Navbar = () => {
                     }}
                   />
                 </div>
-                <span className="font-display font-bold text-xl text-foreground">
-                  IEGS
-                </span>
               </motion.a>
 
               {/* Desktop Navigation */}

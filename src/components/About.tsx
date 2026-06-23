@@ -36,7 +36,7 @@ const About = () => {
             <motion.span
               className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4"
             >
-              About IEGS
+              About Us
             </motion.span>
             
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
@@ -45,9 +45,9 @@ const About = () => {
             </h2>
             
             <p className="text-muted-foreground text-lg mb-6">
-              Led by Armandt, IEGS is driven by integrity, experience and a strong 
-              commitment to customer satisfaction. We understand the frustrations caused 
-              by load shedding, outdated systems and unreliable installations.
+              Driven by integrity, experience and a strong commitment to customer 
+              satisfaction. We understand the frustrations caused by load shedding, 
+              outdated systems and unreliable installations.
             </p>
             
             <p className="text-muted-foreground mb-8">
@@ -76,7 +76,7 @@ const About = () => {
             </div>
 
             <Button variant="glow" size="lg">
-              Learn More About IEGS
+              Learn More About Us
             </Button>
           </AnimatedSection>
 

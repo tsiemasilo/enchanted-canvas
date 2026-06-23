@@ -105,7 +105,6 @@ const MobileMenu = ({ isOpen, onClose, navLinks }: MobileMenuProps) => {
                       <Zap className="w-8 h-8 text-primary blur-sm" />
                     </motion.div>
                   </div>
-                  <span className="font-display font-bold text-xl">IEGS</span>
                 </motion.div>
 
                 <motion.button

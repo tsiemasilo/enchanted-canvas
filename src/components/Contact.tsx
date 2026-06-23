@@ -8,13 +8,6 @@ const contactMethods = [
   {
     icon: MessageCircle,
     title: "Call Now",
-    value: "071 019 7858",
-    href: "https://wa.me/27710197858",
-    description: "Speak directly to Armandt",
-  },
-  {
-    icon: MessageCircle,
-    title: "Alternative Line",
     value: "074 905 4335",
     href: "https://wa.me/27749054335",
     description: "Secondary contact number",
@@ -55,7 +48,7 @@ const Contact = () => {
           
           <p className="text-muted-foreground text-lg">
             Speak directly to the expert, no middleman. Whether you require a quotation, 
-            consultation or urgent call-out, IEGS provides reliable service you can trust.
+            consultation or urgent call-out, we provide reliable service you can trust.
           </p>
         </AnimatedSection>
 
@@ -125,7 +118,7 @@ const Contact = () => {
               
               <p className="text-muted-foreground mb-8">
                 Contact Armandt today for a professional consultation or quotation.
-                IEGS – Your Partner in Power, Safety and Reliability.
+                Your Partner in Power, Safety and Reliability.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
