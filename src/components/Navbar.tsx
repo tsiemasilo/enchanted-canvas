@@ -117,14 +117,6 @@ const Navbar = () => {
 
               {/* CTA Buttons */}
               <div className="hidden lg:flex items-center gap-3">
-                <motion.a
-                  href="tel:0710197858"
-                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <Phone className="w-4 h-4" />
-                  <span className={isScrolled ? "hidden xl:inline" : ""}>Call Armandt</span>
-                </motion.a>
                 <WhatsAppPopup variant="glow" size="sm" />
               </div>
 
