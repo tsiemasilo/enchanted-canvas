@@ -4,7 +4,6 @@ import { MessageCircle, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const whatsappNumbers = [
-  { number: "27710197858", display: "071 019 7858", name: "Armandt" },
   { number: "27749054335", display: "074 905 4335", name: "Nelson" },
 ];
 
