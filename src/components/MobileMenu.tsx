@@ -144,15 +144,6 @@ const MobileMenu = ({ isOpen, onClose, navLinks }: MobileMenuProps) => {
                 custom={navLinks.length + 2}
               >
               <a
-                  href="tel:0710197858"
-                  className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Phone className="w-4 h-4 text-primary" />
-                  </div>
-                  <span>071 019 7858</span>
-                </a>
-                <a
                   href="tel:0749054335"
                   className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
                 >
