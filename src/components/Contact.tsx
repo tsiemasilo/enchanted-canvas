@@ -117,18 +117,12 @@ const Contact = () => {
               </h3>
               
               <p className="text-muted-foreground mb-8">
-                Contact Armandt today for a professional consultation or quotation.
+                Contact us today for a professional consultation or quotation.
                 Your Partner in Power, Safety and Reliability.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <WhatsAppPopup variant="glow" size="lg" />
-                <Button variant="outline" size="lg" asChild>
-                  <a href="tel:0710197858">
-                    <Phone className="mr-2 w-4 h-4" />
-                    Call 071 019 7858
-                  </a>
-                </Button>
               </div>
             </div>
           </motion.div>
